@@ -17,8 +17,8 @@
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>Application</v-list-item-title>
-          <v-list-item-subtitle>Subtext</v-list-item-subtitle>
+          <v-list-item-title>Arturo Saldivar</v-list-item-title>
+          <v-list-item-subtitle>USU001</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -34,6 +34,11 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
+    <template v-slot:append>
+      <div class="pa-2">
+        <v-btn block>Cerrar Sesión</v-btn>
+      </div>
+    </template>
   </v-navigation-drawer>
 </template>
 
@@ -44,8 +49,8 @@ export default {
       drawer: true,
       items: [
         { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Photos", icon: "mdi-image" },
-        { title: "About", icon: "mdi-help-box" }
+        { title: "Tickets", icon: "mdi-cards" },
+        { title: "Configuración", icon: "mdi-cogs" }
       ],
       color: "primary",
       colors: ["primary", "blue", "success", "red", "teal"],
