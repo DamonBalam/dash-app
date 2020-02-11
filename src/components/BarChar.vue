@@ -60,9 +60,7 @@ export default {
           plugins: {
             labels: {
               render: "percentage",
-              fontColor: "black",
-              arc: true,
-              precision: 2
+              fontColor: "black"
             }
           },
           scales: {
