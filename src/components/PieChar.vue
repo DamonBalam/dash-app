@@ -1,6 +1,6 @@
 <script>
 import { Doughnut } from "vue-chartjs";
-
+import "chartjs-plugin-labels";
 export default {
   extends: Doughnut,
   props: ["title", "data"],
@@ -16,7 +16,7 @@ export default {
           datasets: [
             {
               label: "Actividades",
-              backgroundColor: ["#F4511E", "#FFF176", "#4DB6AC", "#00695C"],
+              backgroundColor: ["#F4511E", "#F9A825", "#4DB6AC", "#00695C"],
               data: this.data,
               borderWidth: 1,
               borderColor: "#fff",
@@ -35,6 +35,13 @@ export default {
             display: true,
             text: this.title,
             fontSize: 22
+          },
+          plugins: {
+            labels: {
+              render: "percentage",
+              fontColor: "white",
+              precision: 2
+            }
           }
         }
       );

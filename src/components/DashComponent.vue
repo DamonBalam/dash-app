@@ -48,7 +48,12 @@
       <v-col cols="12">
         <PieChar
           class="d-inline-block contgraf"
-          :data="[35, 15, 15, 25]"
+          :data="[883, 310, 764, 429]"
+          :title="'TICKETS'"
+        />
+        <PieChar
+          class="d-inline-block contgraf"
+          :data="[35, 25, 15, 25]"
           :title="'INCIDENTES'"
         />
         <PieChar
@@ -72,6 +77,20 @@
       </v-col>
       <v-col cols="6">
         <BarChar />
+        <div class="text-center">
+          <v-chip class="ma-2" color="#FF6D00" label text-color="white">
+            INCIDENTES
+          </v-chip>
+          <v-chip class="ma-2" color="#BF360C" label text-color="white">
+            PROBLEMAS
+          </v-chip>
+          <v-chip class="ma-2" color="#311B92" label text-color="white">
+            TAREAS
+          </v-chip>
+          <v-chip class="ma-2" color="#00897B" label text-color="white">
+            CONSULTAS
+          </v-chip>
+        </div>
       </v-col>
       <v-col cols="6">
         <LineChar />
@@ -103,6 +122,6 @@ export default {
 <style lang="scss" scoped>
 .contgraf {
   max-width: 250px;
-  margin: 0 80px;
+  margin: 0 40px;
 }
 </style>

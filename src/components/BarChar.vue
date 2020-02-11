@@ -1,8 +1,8 @@
 <script>
-import { HorizontalBar } from "vue-chartjs";
-
+import { Bar } from "vue-chartjs";
+import "chartjs-plugin-labels";
 export default {
-  extends: HorizontalBar,
+  extends: Bar,
   mounted() {
     this.renderLineChart();
     // Overwriting base render method with actual data.
@@ -11,25 +11,38 @@ export default {
     renderLineChart: function() {
       this.renderChart(
         {
-          labels: ["Abierto", "Atendido", "Revisión", "Cerrado"],
+          labels: [
+            "SITIO 1",
+            "SITIO 2",
+            "SITIO 3",
+            "SITIO 4",
+            "SITIO 5",
+            "SITIO 6",
+            "SITIO 7",
+            "SITIO 8",
+            "SITIO 9",
+            "SITIO 10"
+          ],
           datasets: [
             {
-              label: "% de avance",
-              backgroundColor: [
-                "#F4511E",
-                "rgba(255, 206, 86, 0.6)",
-                "rgba(255, 159, 64, 0.6)",
-                "rgba(75, 192, 192, 0.6)",
-                "rgba(255, 99, 132, 0.6)",
-                "rgba(153, 102, 255, 0.6)",
-                "rgba(255, 99, 132, 0.6)"
-              ],
-              data: [25, 25, 25, 25],
-              borderWidth: 1,
-              borderColor: "#777",
-              hoverBorderWidth: 3,
-              hoverBorderColor: "#000",
-              yAxis: 3
+              label: "INC",
+              data: [47.8, 20, 14, 33, 19, 35, 25, 25, 5, 15],
+              backgroundColor: "#FF6D00" // green
+            },
+            {
+              label: "PRO",
+              data: [20.7, 15, 36, 10, 35, 20, 30, 15, 25, 10],
+              backgroundColor: "#E53935" // yellow
+            },
+            {
+              label: "TAR",
+              data: [11.4, 10, 10, 15, 15, 15, 20, 15, 15, 10],
+              backgroundColor: "#5E35B1" // red
+            },
+            {
+              label: "CON",
+              data: [10.1, 25, 30, 25, 35, 25, 15, 15, 35, 35],
+              backgroundColor: "#00897B" // green
             }
           ]
         },
@@ -41,19 +54,26 @@ export default {
           },
           title: {
             display: true,
-            text: "Avances de ",
+            text: "TOP 10 ",
             fontSize: 25
+          },
+          plugins: {
+            labels: {
+              render: "percentage",
+              fontColor: "black",
+              arc: true,
+              precision: 2
+            }
           },
           scales: {
             xAxes: [
               {
-                barPercentage: 1,
-                // barThickness: 6,
-                // maxBarThickness: 8,
-                minBarLength: 2
-                // gridLines: {
-                //     offsetGridLines: true
-                // }
+                stacked: true
+              }
+            ],
+            yAxes: [
+              {
+                stacked: true
               }
             ]
           }
