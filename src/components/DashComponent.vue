@@ -122,6 +122,6 @@ export default {
 <style lang="scss" scoped>
 .contgraf {
   max-width: 250px;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 </style>
