@@ -7,10 +7,10 @@
           <small class="grey--text">v1.1</small>
         </span>
       </v-col>
-      <v-col cols="2">
+      <v-col cols="12" xl="2" lg="2" md="3" sm="4">
         <WidgetComponent :countTotal="2386" :text="'TOTAL'" :porcent="100" />
       </v-col>
-      <v-col cols="2">
+      <v-col cols="12" xl="2" lg="2" md="3" sm="4">
         <WidgetComponent
           :countTotal="883"
           :text="'INCIDENTES'"
@@ -18,7 +18,7 @@
           :isColor="'#FF6D00'"
         />
       </v-col>
-      <v-col cols="2">
+      <v-col cols="12" xl="2" lg="2" md="3" sm="4">
         <WidgetComponent
           :countTotal="310"
           :text="'PROBLEMAS'"
@@ -26,7 +26,7 @@
           :isColor="'#BF360C'"
         />
       </v-col>
-      <v-col cols="2">
+      <v-col cols="12" xl="2" lg="2" md="3" sm="4">
         <WidgetComponent
           :countTotal="764"
           :text="'TAREAS'"
@@ -34,7 +34,7 @@
           :isColor="'#311B92'"
         />
       </v-col>
-      <v-col cols="2">
+      <v-col cols="12" xl="2" lg="2" md="3" sm="4">
         <WidgetComponent
           :countTotal="429"
           :text="'CONSULTAS'"
@@ -75,7 +75,7 @@
       <v-col cols="12">
         <v-divider></v-divider>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" xl="6">
         <BarChar />
         <div class="text-center">
           <v-chip class="ma-2" color="#FF6D00" label text-color="white">
@@ -92,7 +92,7 @@
           </v-chip>
         </div>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" xl="6">
         <LineChar />
         <div class="text-center">
           <v-chip class="ma-2" color="teal darken-1" label text-color="white">
