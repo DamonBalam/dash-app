@@ -4,10 +4,9 @@
     <SideComponent />
 
     <!-- barra de navegacion -->
-    <v-app-bar app color="light-blue darken-4" dark clipped-left="true">
-      <div class="d-flex align-center">
-        <h1>Sistema de Control</h1>
-      </div>
+    <v-app-bar app color="light-blue darken-4" dense dark clipped-left="true">
+      <v-app-bar-nav-icon @click="menu"></v-app-bar-nav-icon>
+      <v-toolbar-title>SISCON</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -30,14 +29,14 @@ import SideComponent from "./components/SideComponent";
 
 export default {
   name: "App",
-
   components: {
     DashComponent,
     SideComponent
   },
-
-  data: () => ({
-    //
-  })
+  methods: {
+    menu() {
+      this.$store.commit("SET_DRAWER");
+    }
+  }
 };
 </script>

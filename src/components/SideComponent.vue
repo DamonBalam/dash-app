@@ -11,7 +11,7 @@
     clipped
   >
     <v-list dense nav class="py-0">
-      <v-list-item two-line :class="miniVariant && 'px-0'">
+      <v-list-item two-line :class="miniVariant && 'px-0'" @click="menu">
         <v-list-item-avatar>
           <img src="https://randomuser.me/api/portraits/men/81.jpg" />
         </v-list-item-avatar>
@@ -46,7 +46,6 @@
 export default {
   data() {
     return {
-      drawer: true,
       items: [
         { title: "Dashboard", icon: "mdi-view-dashboard" },
         { title: "Tickets", icon: "mdi-cards" },
@@ -59,6 +58,16 @@ export default {
       expandOnHover: false,
       background: false
     };
+  },
+  methods: {
+    menu() {
+      this.$store.commit("SET_DRAWER");
+    }
+  },
+  computed: {
+    drawer() {
+      return this.$store.state.drawer;
+    }
   }
 };
 </script>
