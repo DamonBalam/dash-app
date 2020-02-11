@@ -42,15 +42,67 @@
           :isColor="'green'"
         />
       </v-col>
+      <v-col cols="12">
+        <v-divider></v-divider>
+      </v-col>
+      <v-col cols="12">
+        <PieChar
+          class="d-inline-block contgraf"
+          :data="[35, 15, 15, 25]"
+          :title="'INCIDENTES'"
+        />
+        <PieChar
+          class="d-inline-block contgraf"
+          :data="[15, 15, 15, 55]"
+          :title="'PROBLEMAS'"
+        />
+        <PieChar
+          class="d-inline-block contgraf"
+          :data="[55, 15, 15, 15]"
+          :title="'TAREAS'"
+        />
+        <PieChar
+          class="d-inline-block contgraf"
+          :data="[15, 15, 35, 35]"
+          :title="'CONSULTAS'"
+        />
+      </v-col>
+      <v-col cols="12">
+        <v-divider></v-divider>
+      </v-col>
+      <v-col cols="6">
+        <BarChar />
+      </v-col>
+      <v-col cols="6">
+        <LineChar />
+        <div class="text-center">
+          <v-chip class="ma-2" color="teal darken-1" label text-color="white">
+            MES: FEBRERO
+          </v-chip>
+        </div>
+      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
 import WidgetComponent from "./WidgetComponent";
+import LineChar from "./LineChar";
+import PieChar from "./PieChar";
+import BarChar from "./BarChar";
 export default {
   components: {
-    WidgetComponent
+    WidgetComponent,
+    LineChar,
+    PieChar,
+    BarChar
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.contgraf {
+  max-width: 250px;
+  margin: 0 80px;
+}
+</style>
